@@ -85,10 +85,10 @@ function pickPlanet(planets) {
     return planets[index]
 }
 
-function showAlert(alertMessage) {
-    try{window.alert(alertMessage)
-    }catch(error){};
-};
+// function showAlert(alertMessage) {
+//     try{window.alert(alertMessage)
+//     }catch(error){};
+// };
 
 module.exports.addDestinationInfo = addDestinationInfo;
 module.exports.validateInput = validateInput;
