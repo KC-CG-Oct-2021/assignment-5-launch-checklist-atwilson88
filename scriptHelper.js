@@ -12,7 +12,7 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
                     <li>Distance from Earth: ${distance}</li>
                     <li>Number of Moons: ${moons}</li>
                 </ol>
-                <img src = ${image}>
+                <img src = ${imageUrl}>
     `;
     document.getElementById ("missionTarget").innerHTML = planetDetails;
 }
@@ -35,11 +35,11 @@ function validateInput(testInput) {
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
 
     if (validateInput(pilot) === "Empty" || (validateInput(copilot) === "Empty") || (validateInput(fuelLevel) === "Empty") || (validateInput(cargoLevel) === "Empty")) {
-        alert ("All fields are required!");
+        showAlert ("All fields are required!");
     }
 
     if (validateInput(pilot) === "Is a Number" || (validateInput(copilot) === "Is a Number") || (validateInput(fuelLevel === "Not a Number") || (validateInput(cargoLevel) === "Not a Number"))) {
-        alert ("Make sure to enter valid information for each field!");
+        showAlert ("Make sure to enter valid information for each field!");
     }
 
     document.getElementById ("pilotStatus").innerHTML =  `Pilot ${pilot} is ready for launch.`;
